@@ -1,0 +1,352 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset CSS cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header - Glassmorphism */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: #f5f5f7;
+  min-height: 600px;
+  width: 100%;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 10px;
+  border-bottom: 2px solid #fff;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-content .btn {
+  background: #0071e3;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.hero-content .btn:hover {
+  background: #005bb5;
+}
+
+/* Features Section */
+#features {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+#features h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.feature-item {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-item img {
+  width: 100%;          
+  height: 250px;        
+  object-fit: cover;    
+  border-radius: 10px;  
+  margin-bottom: 20px;  
+}
+  
+.feature-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Gallery Section */
+#gallery {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+#gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;  /* Giữ chiều cao cố định */
+  object-fit: contain;  /* Thay thành contain để ảnh không bị cắt */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+/* Style cho container của ảnh lớn */
+#largeImageContainer {
+    text-align: center;  /* Căn giữa ảnh */
+    margin-bottom: 20px;  /* Khoảng cách dưới */
+  }
+  
+  /* Style cho ảnh lớn */
+  #largeImage {
+    width: 80%;  /* Chiều rộng 80% của container cha */
+    max-width: 800px;  /* Giới hạn tối đa để không quá to trên desktop */
+    height: auto;  /* Chiều cao tự động để giữ tỷ lệ */
+    border-radius: 12px;  /* Bo góc cho đẹp */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Thêm shadow nhẹ */
+  }
+  
+  /* Làm responsive cho mobile */
+  @media (max-width: 768px) {
+    #largeImage {
+      width: 100%;  /* Trên mobile, chiếm full chiều rộng */
+      max-width: 100%;  /* Không vượt quá màn hình */
+    }
+  }
+  
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #111;
+  color: #eee;
+}
+
+footer .social-links a {
+  color: #eee;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  header nav ul {
+    display: none; /* giả lập thu gọn menu */
+  }
+
+  header nav::after {
+    content: "☰";
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #222;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header nav::after {
+    font-size: 2rem; /* Hamburger menu rõ hơn */
+  }
+}
+/* Pricing Section */
+#pricing {
+    padding: 60px 10%;
+    text-align: center;
+    background: #f9f9f9;
+  }
+  
+  #pricing h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .pricing-cards .card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .pricing-cards .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .pricing-cards .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #007bff;
+  }
+  
+  .pricing-cards ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+  }
+  
+  .pricing-cards ul li {
+    margin-bottom: 10px;
+  }
+  
+  .pricing-cards .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .pricing-cards .btn:hover {
+    background: #0056b3;
+  }
+  
+  .pricing-cards .highlight {
+    border: 2px solid #007bff;
+  }
+  .feature-item {
+    opacity: 0;  /* Ban đầu ẩn */
+    transform: translateY(20px);  /* Dịch chuyển lên một chút từ dưới */
+    transition: opacity 0.5s ease, transform 0.5s ease;  /* Hiệu ứng mượt */
+}
+.feature-item.visible {
+    opacity: 1;  /* Hiển thị đầy đủ */
+    transform: translateY(0);  /* Về vị trí gốc */
+}
